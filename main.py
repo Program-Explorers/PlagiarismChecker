@@ -1,11 +1,4 @@
-# from textblob import TextBlob
-#
-
-#
-# blob = TextBlob(text)
-# print(blob.sentences)
-# for sentence in blob.sentences:
-#     print(sentence.sentiment.polarity)
+import http.client
 
 
 class plagiarism_checker:
@@ -33,3 +26,16 @@ artificial intelligence run rampant.
 '''
 hi = plagiarism_checker(text)
 hi.checker()
+
+conn = http.client.HTTPSConnection("google-search3.p.rapidapi.com")
+
+headers = {
+    'x-rapidapi-key': "c4fb5f1f31msh492ecef4fd3350fp1d56b0jsn45ae19f27e93",
+    'x-rapidapi-host': "google-search3.p.rapidapi.com"
+    }
+
+conn.request("GET", "/api/v1/search/q=elon+musk&num=10", headers=headers)
+
+res = conn.getresponse()
+data = res.read()
+
