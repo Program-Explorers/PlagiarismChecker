@@ -48,7 +48,7 @@ label = tk.Label(text="Topic")
 frame1 = tk.Frame(window, width=300, height=20)
 entry = tk.Entry()
 label1 = tk.Label(text="Text")
-entry1 = tk.Entry()
+t = tk.Text(window, height=20, width=30)
 frame2 = tk.Frame(window, width=300, height=20)
 
 
@@ -56,7 +56,7 @@ label.pack()
 entry.pack()
 frame1.pack(fill=None, expand=False)
 label1.pack()
-entry1.pack()
+t.pack()
 frame2.pack(fill=None, expand=False)
 
 window.mainloop()
