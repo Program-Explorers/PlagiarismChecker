@@ -29,21 +29,35 @@ class PlagiarismChecker:
 hi = PlagiarismChecker(text)
 hi.checker()
 
-conn = http.client.HTTPSConnection("google-search3.p.rapidapi.com")
+# uncomment this when you want to get search results
 
-headers = {
-    'x-rapidapi-key': "c4fb5f1f31msh492ecef4fd3350fp1d56b0jsn45ae19f27e93",
-    'x-rapidapi-host': "google-search3.p.rapidapi.com"
-    }
-
-conn.request("GET", "/api/v1/search/q=elon+musk&num=10", headers=headers)
-
-res = conn.getresponse()
-data = res.read()
+# conn = http.client.HTTPSConnection("google-search3.p.rapidapi.com")
+#
+# headers = {
+#     'x-rapidapi-key': "c4fb5f1f31msh492ecef4fd3350fp1d56b0jsn45ae19f27e93",
+#     'x-rapidapi-host': "google-search3.p.rapidapi.com"
+#     }
+#
+# conn.request("GET", "/api/v1/search/q=elon+musk&num=10", headers=headers)
+#
+# res = conn.getresponse()
+# data = res.read()
 
 window = tk.Tk()
-label = tk.Label(text="Testing")
+label = tk.Label(text="Topic")
+frame1 = tk.Frame(window, width=300, height=20)
+entry = tk.Entry()
+label1 = tk.Label(text="Text")
+entry1 = tk.Entry()
+frame2 = tk.Frame(window, width=300, height=20)
+
+
 label.pack()
+entry.pack()
+frame1.pack(fill=None, expand=False)
+label1.pack()
+entry1.pack()
+frame2.pack(fill=None, expand=False)
 
 window.mainloop()
 
