@@ -44,14 +44,18 @@ hi.checker()
 # data = res.read()
 
 window = tk.Tk()
-label = tk.Label(text="Topic")
-frame1 = tk.Frame(window, width=300, height=20)
+label = tk.Label(text="Topic", bg='black', fg='#fff')
+label1 = tk.Label(text="Text", bg='black', fg='#fff')
 entry = tk.Entry()
-label1 = tk.Label(text="Text")
-t = tk.Text(window, height=20, width=30)
-frame2 = tk.Frame(window, width=300, height=20)
 
+frame = tk.Frame(window, width=400, height=20, background='black')
+frame1 = tk.Frame(window, width=400, height=20, background='black')
+frame2 = tk.Frame(window, width=300, height=20, background='black')
 
+t = tk.Text(window, height=20, width=45)
+window.configure(background='black')
+
+frame.pack(fill=None, expand=False)
 label.pack()
 entry.pack()
 frame1.pack(fill=None, expand=False)
