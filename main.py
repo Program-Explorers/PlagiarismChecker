@@ -40,7 +40,7 @@ class PlagiarismChecker:
     def submit(self):
         txt = t.get("1.0", "end")
         self.user_text = txt
-        # self.checker()
+        self.checker()
 
     def get_text(self):
         print(self.user_text)
